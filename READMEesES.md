@@ -1,7 +1,7 @@
-﻿<a href="https://github.com/techshareroom/backup-restore-advanced-cms/blob/main/READMEesES.md" target="_blank"><img src="https://github.com/techshareroom/resources/raw/main/images/languages/spain.png" width="80" img align="right"></a>
-<a href="https://github.com/techshareroom/backup-restore-advanced-cms" target="_blank"><img src="https://github.com/techshareroom/resources/raw/main/images/languages/united-kingdom.png" width="80" style="vertical-align:middle;margin:0px 50px" img align="right"></a>
+﻿<a href="https://github.com/techshareroom/backup-restore-advanced-cms/blob/master/READMEesES.md" target="_blank"><img src="https://github.com/techshareroom/resources/raw/master/images/languages/spain.png" width="80" img align="right"></a>
+<a href="https://github.com/techshareroom/backup-restore-advanced-cms" target="_blank"><img src="https://github.com/techshareroom/resources/raw/master/images/languages/united-kingdom.png" width="80" style="vertical-align:middle;margin:0px 50px" img align="right"></a>
 
-<img src="https://github.com/techshareroom/resources/raw/main/images/Techshare_room_Logo3_1.gif" width="80"> backup-restore-advanced-cms
+<img src="https://github.com/techshareroom/resources/raw/master/images/backup-restore-advanced-cms.png" width="80"> backup-restore-advanced-cms
 =============================================
 
 <a href="https://discord.gg/hbAHGSYGfs">
