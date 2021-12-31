@@ -12,6 +12,7 @@ mysql_db_name="" #techshareroom_wiki
 site_folder="" #techshareroom_wiki
 dir_for_backups="" #/home/usuario/backups/techshareroom_wiki
 dir_to_be_backed_up="" #/var/www/html/techshareroom_wiki
+time_for_deletion="" #5
 
 #########
 # LOGIC #
@@ -31,6 +32,6 @@ tar cjf ${dir_for_backups}/${site_folder}_files_$(date +%Y-%m-%d_%H-%M-%S).tbz -
 echo "Backup OK! Now removing old bakups if proceed"
 
 #4º Remove old backups
-find $dir_for_backups -name '*.sql.gz' -o -name '*.tbz' -type f -mtime +5 -delete
+find $dir_for_backups -name '*.sql.gz' -o -name '*.tbz' -type f -mtime +${time_for_deletion} -delete
 
 echo "All operationes DONE"
