@@ -5,52 +5,32 @@
 ##########
 
 # MySQL login information
-mysql_username=""
+mysql_username="" #root
 mysql_user_password=""
-mysql_db_name=""
+mysql_db_name="" #techshareroom_wiki
 
-# Site address will be included in the file name of the backup, so
-# basically it can be anything. This is just an identifier.
-
-#site_address="example.com"
-site_address=""
-
-# Absolute path to the directory in which the backups will be stored.
-# The path is defined without the trailing slash. See the example below: 
-
-#dir_for_backups="/home/user/backups"
-dir_for_backups=""
-
-# The absolute location of the files of the site to be backed up without
-# the trailing slash. See the example below:
-
-#dir_to_be_backed_up="/home/user/public_html"
-dir_to_be_backed_up=""
+site_folder="" #techshareroom_wiki
+dir_for_backups="" #/home/usuario/backups/techshareroom_wiki
+dir_to_be_backed_up="" #/var/www/html/techshareroom_wiki
 
 #########
 # LOGIC #
 #########
 
-# Create the backup directories if needed
-[ ! -d ${dir_for_backups} ]         && mkdir ${dir_for_backups}
-[ ! -d ${dir_for_backups}/monthly ] && mkdir ${dir_for_backups}/monthly
-[ ! -d ${dir_for_backups}/cyclic ]  && mkdir ${dir_for_backups}/cyclic
+echo "Backuping the wiki! Data & DB. Please be patient..."
 
-mysqldump       -u${mysql_username} -p${mysql_user_password} \
-                ${mysql_db_name} | gzip > \
-                ${dir_for_backups}/${site_address}_db_$(date +%y%m%d).sql.gz
+#1º Create the backup directories if needed, only executed first time
+[ ! -d ${dir_for_backups} ] && mkdir ${dir_for_backups}
 
-tar cjf         ${dir_for_backups}/${site_address}_files_$(date +%y%m%d).tbz \
-                --exclude ${dir_for_backups} \
-                ${dir_to_be_backed_up}
+#2º Backup db
+mysqldump -u${mysql_username} -p${mysql_user_password} ${mysql_db_name} | gzip > ${dir_for_backups}/${site_folder}_db_$(date +%Y-%m-%d_%H-%M-%S).sql.gz
 
-if [ $(date +%d) = 01 ]; then
-                cp ${dir_for_backups}/${site_address}_db_$(date +%y%m%d)*.tbz \
-                ${dir_for_backups}/monthly/
-fi 
+#3º Backup directory
+tar cjf ${dir_for_backups}/${site_folder}_files_$(date +%Y-%m-%d_%H-%M-%S).tbz --exclude ${dir_for_backups} ${dir_to_be_backed_up}
 
-mv              ${dir_for_backups}/${site_address}_files_$(date +%y%m%d).tbz \
-                ${dir_for_backups}/cyclic/${site_address}_files_$(date +%a).tbz
+echo "Backup OK! Now removing old bakups if proceed"
 
-mv              ${dir_for_backups}/${site_address}_db_$(date +%y%m%d).sql.gz \
-                ${dir_for_backups}/cyclic/${site_address}_db_$(date +%a).sql.gz
+#4º Remove old backups
+find $dir_for_backups -name '*.sql.gz' -o -name '*.tbz' -type f -mtime +5 -delete
+
+echo "All operationes DONE"
