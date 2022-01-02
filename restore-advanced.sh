@@ -34,7 +34,7 @@ mysqladmin -u${mysql_username} -p${mysql_user_password} drop ${mysql_db_name}
 rm -rf ${dir_to_be_backed_up}
 
 #5º Create the new db
-mysqladmin -u${mysql_username} -p${mysql_user_password} create database ${mysql_db_name}
+mysqladmin -u${mysql_username} -p${mysql_user_password} create ${mysql_db_name}
 
 #6º Uncompress db file
 gzip -d ${database_file}
