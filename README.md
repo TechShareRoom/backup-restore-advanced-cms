@@ -22,6 +22,19 @@ You can add PR, bugs, etc.
 
 Fork if you want.
 
+Tutorial for backup
+=============================================
+
+* Modify "Config" section
+* Run script with ./backup-advanced.sh
+* Add manually to your cron if you like
+
+Tutorial for restore
+=============================================
+
+* Modify "Config" section
+* Run script with ./restore-advanced.sh
+
 This fork has these extras
 =============================================
 
