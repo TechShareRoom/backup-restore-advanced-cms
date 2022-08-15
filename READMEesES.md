@@ -22,14 +22,14 @@ Puedes añadir PR, bugs, etc.
 
 Forkea si quieres.
 
-Tutorial for backup
+Tutorial para copia de seguridad
 =============================================
 
 * Modifica la sección de "Config"
 * Ejecuta el script con ./backup-advanced.sh
 * Añade manualmente a tu cron si quieres
 
-Tutorial for restore
+Tutorial para restaurar copia de seguridad
 =============================================
 
 * Modifica la sección de "Config"
