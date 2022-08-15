@@ -32,6 +32,6 @@ tar cjf ${dir_for_backups}/${site_folder}_files_$(date +%Y-%m-%d_%H-%M-%S).tbz -
 echo "Backup OK! Now removing old bakups if proceed"
 
 #4º Remove old backups
-find $dir_for_backups -name '*.sql.gz' -o -name '*.tbz' -type f -mtime +${time_for_deletion} -delete
+find ${dir_for_backups}/${site_folder}_* -mtime +${time_for_deletion} -exec rm {} \;
 
 echo "All operationes DONE"
