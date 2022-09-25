@@ -10,8 +10,8 @@ mysql_user_password=""
 mysql_db_name="" #techshareroom_wiki
 
 site_folder="" #techshareroom_wiki
-dir_for_backups="" #/home/usuario/backups/techshareroom_wiki
-dir_to_be_backed_up="" #/var/www/html/techshareroom_wiki
+dir_for_backups="" #"/home/usuario/backups/techshareroom_wiki"
+dir_to_be_backed_up="" #"/var/www/html/techshareroom_wiki"
 time_for_deletion="" #5
 
 #########
