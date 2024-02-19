@@ -5,15 +5,16 @@
 ##########
 
 # MySQL login information
-mysql_username="" #root
-mysql_user_password=""
-mysql_db_name="" #techshareroom_wiki
+mysql_username="root"
+mysql_user_password=#""
+mysql_db_name="techshareroom_wiki"
 
-database_file="" #"techshareroom_wiki_db_2021-12-24_00-00-01.sql.gz"
-database_file_uncompressed="" #"techshareroom_wiki_db_2021-12-24_00-00-01.sql"
-dir_file="" #"techshareroom_wiki_files_2021-12-24_00-00-06.tbz"
-dir_for_backups="" #"/home/usuario/backups/techshareroom_wiki"
-dir_to_be_backed_up="" #"/var/www/html/techshareroom_wiki"
+#Folder variables and files
+database_file="techshareroom_wiki_db_2021-12-24_00-00-01.sql.gz"
+database_file_uncompressed="techshareroom_wiki_db_2021-12-24_00-00-01.sql"
+dir_file="techshareroom_wiki_files_2021-12-24_00-00-06.tbz"
+dir_for_backups="/home/usuario/backups/techshareroom_wiki"
+dir_to_be_backed_up="/var/www/html/techshareroom_wiki"
 
 #########
 # LOGIC #
@@ -47,4 +48,5 @@ mysql -u${mysql_username} -p${mysql_user_password} ${mysql_db_name} < ${dir_for_
 #8º Uncompress files on the correct folder
 tar xvjf ${dir_file} -C /var --strip-components=1
 
+echo
 echo "All operationes DONE"
