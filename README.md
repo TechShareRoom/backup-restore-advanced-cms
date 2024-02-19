@@ -38,8 +38,9 @@ Tutorial for restore
 This fork has these extras
 =============================================
 
-* Includes a [restore script](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/restore-advanced.sh) 
-* Removes old backups
+* Includes a [restore script](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/restore-advanced.sh)
+* Includes step 4 and 5 for copy data to a second remote server on [main script](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/backup-advanced.sh). You can comment these steps if you don't want to use it.
+* Includes a [delete old backups script](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/delete-advanced.sh). Recommended to put on a second remote server.
 
 TO DO's
 =============================================

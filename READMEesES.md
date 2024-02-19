@@ -38,8 +38,10 @@ Tutorial para restaurar copia de seguridad
 Este fork tiene estos extras
 =============================================
 
-* Incluye un [restore script](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/restore-advanced.sh) 
-* Elimina las copias de seguridad antiguas
+* Incluye un [script de restauración](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/restore-advanced.sh) 
+* Incluye un paso 4 y 5 para copiar los datos en un segundo servidor remoto en el [script principal](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/backup-advanced.sh). Puedes comentar esots pasos si no quieres usarlos.
+* Incluye un [script para borrar las copias de seguridad antiguas](https://github.com/TechShareRoom/backup-restore-advanced-cms/blob/master/delete-advanced.sh). Recomendado poner en un segundo servidor remoto.
+
 
 PARA HACER
 =============================================
