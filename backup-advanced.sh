@@ -6,7 +6,7 @@
 
 # MySQL login information
 mysql_username="root"
-mysql_user_password=#"" #password here
+mysql_user_password="#" #password here
 mysql_db_name="techshareroom_wiki"
 
 #Folder variables and files
